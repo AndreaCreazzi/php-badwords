@@ -1,5 +1,6 @@
 <?php
-
+$text = $_GET["text"];
+$badwords = $_GET["badwords"];
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,14 @@
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>Testo base</h1>
+        <p><?= $text ?></p>
+        <p>il testo contiente tot: <?= strlen($text) ?></p>
+        <h1>Badwords</h1>
+        <p><?= str_replace($badwords, "***", $text) ?></p>
+        <p>il testo contiente tot: <?= strlen($text) ?></p>
+    </div>
 </body>
 
 </html>
