@@ -1,6 +1,7 @@
 <?php
 $text = $_GET["text"];
 $badwords = $_GET["badwords"];
+$length = str_replace($badwords, "***", $text)
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +21,8 @@ $badwords = $_GET["badwords"];
         <p><?= $text ?></p>
         <p>il testo contiente tot: <?= strlen($text) ?></p>
         <h1>Badwords</h1>
-        <p><?= str_replace($badwords, "***", $text) ?></p>
-        <p>il testo contiente tot: <?= strlen($text) ?></p>
+        <p><?= $length ?></p>
+        <p>il testo contiente tot: <?= strlen($length) ?></p>
     </div>
 </body>
 
